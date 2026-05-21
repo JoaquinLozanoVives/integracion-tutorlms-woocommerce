@@ -1,0 +1,59 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # Caso de Estudio: Integraci\'f3n de E-Commerce y Despliegue de Plataforma LMS (WordPress/WooCommerce)\
+\
+## \uc0\u55357 \u56541  Descripci\'f3n del Proyecto\
+Este proyecto consiste en la implementaci\'f3n t\'e9cnica, sincronizaci\'f3n de arquitectura y configuraci\'f3n de extremo a extremo (end-to-end) de un sistema profesional de gesti\'f3n de aprendizaje (**LMS**) integrado en una plataforma web preexistente.\
+\
+El objetivo principal fue transformar un sitio de contenido educativo en una academia digital completamente automatizada, capaz de comercializar cursos bajo estrictas reglas de negocio y control de accesos.\
+\
+* **Estado:** Desplegado con \'e9xito en entorno de Staging (Listo para migraci\'f3n a producci\'f3n).\
+* **Rol:** Integrador L\'edder de Sistemas y Consultor T\'e9cnico.\
+\
+---\
+\
+## \uc0\u55357 \u57056 \u65039  Stack Tecnol\'f3gico y Arquitectura\
+* **CMS N\'facleo:** WordPress\
+* **Motor de E-Commerce:** WooCommerce (Arquitectura basada en API REST para la sincronizaci\'f3n de pasarelas de pago).\
+* **Framework LMS:** TutorLMS Pro (Nivel Avanzado).\
+* **Infraestructura de V\'eddeo y Seguridad:** Vimeo Business (Configurado con incrustaci\'f3n restringida por dominio para prevenir descargas no autorizadas y pirater\'eda).\
+* **Infraestructura y Hosting:** SiteGround (Gesti\'f3n de entornos de Staging para despliegues seguros, copias de seguridad automatizadas diarias y cach\'e9 a nivel de servidor).\
+\
+---\
+\
+## \uc0\u55357 \u56960  Implementaciones Clave y Desaf\'edos T\'e9cnicos\
+\
+### 1. Sincronizaci\'f3n de Datos y Licenciamiento Din\'e1mico\
+* Configuraci\'f3n de un mapeo estricto 1:1 entre los productos virtuales de WooCommerce y los cursos de TutorLMS.\
+* Automatizaci\'f3n del flujo para que las notificaciones IPN/webhooks activen instant\'e1neamente la inscripci\'f3n del usuario y la actualizaci\'f3n de su panel de control ("Mis Cursos") tras la verificaci\'f3n correcta del pago.\
+\
+### 2. L\'f3gica de Negocio y Control de Acceso\
+* **Arquitectura de Aprendizaje Secuencial (Drip Learning):** Implementaci\'f3n de un modelo de navegaci\'f3n restrictivo. Se restringe program\'e1ticamente el acceso a las lecciones avanzadas y entregas de tareas hasta que el alumno haya completado las unidades previas.\
+* **Restricci\'f3n de Contenido (Content Gates):** Configuraci\'f3n de reglas a nivel de servidor para bloquear el acceso no autorizado a directorios y archivos premium si no se detecta una sesi\'f3n de facturaci\'f3n activa.\
+* **Vistas Previas Asim\'e9tricas:** Configuraci\'f3n de opciones de "Vista previa de la lecci\'f3n" para permitir a los clientes potenciales visualizar muestras gratuitas sin autenticaci\'f3n, manteniendo el resto del curso estrictamente bloqueado.\
+\
+### 3. Consistencia UI/UX y Pruebas en Entorno Sandbox\
+* Personalizaci\'f3n de las hojas de estilo nativas del LMS para adaptarlas perfectamente al sistema de dise\'f1o e identidad visual de la plataforma del cliente.\
+* Ejecuci\'f3n de pruebas de ciclo completo de compra en un entorno *sandbox* aislado (simulaciones de pago, concesi\'f3n de accesos y respuesta de la barra de progreso) para garantizar un 0% de tiempo de inactividad (downtime) en la migraci\'f3n final.\
+\
+---\
+\
+## \uc0\u55357 \u56550  Entregables y Procedimientos Operativos Est\'e1ndar (SOP)\
+Como parte del traspaso profesional del proyecto, se redact\'f3 y entreg\'f3 al cliente un **Manual T\'e9cnico de Despliegue y Subida de Contenidos**. Este documento establece un pipeline estricto para garantizar la escalabilidad del sistema y la operaci\'f3n aut\'f3noma de la plataforma.\
+\
+### Fases del Flujo de Trabajo Documentadas en el Manual:\
+* **Fase 1 (Configuraci\'f3n Base LMS):** Definici\'f3n abstracta de la estructura del curso, clasificaci\'f3n de taxonom\'edas y restricciones secuenciales.\
+* **Fase 2 (Aprovisionamiento E-Commerce):** Creaci\'f3n de productos virtuales simples, configuraci\'f3n de precios din\'e1micos y categorizaci\'f3n en el cat\'e1logo.\
+* **Fase 3 (Vinculaci\'f3n de Base de Datos):** Enlace del ID del producto comercial con la instancia del LMS para asegurar la sincronizaci\'f3n autom\'e1tica.\
+* **Fase 4 (Ingesta de Contenidos):** Estructuraci\'f3n de temas, creaci\'f3n de lecciones, incrustaci\'f3n de endpoints seguros de Vimeo y configuraci\'f3n de muestras gratuitas.\
+* **Fase 5 (Checklist de Lanzamiento):** Pruebas de compra en entorno Sandbox, verificaci\'f3n de facturaci\'f3n y control de calidad (QA) mediante navegaci\'f3n en modo inc\'f3gnito.\
+\
+---\
+\
+## \uc0\u55357 \u56594  Confidencialidad y Cumplimiento\
+*Nota: Debido a acuerdos de confidencialidad (NDA) y cumplimiento de seguridad, se omiten de este repositorio p\'fablico el c\'f3digo fuente propietario, credenciales de administraci\'f3n, volcados de bases de datos e interfaces con la marca del cliente. La documentaci\'f3n adjunta ha sido auditada para proteger la infraestructura del cliente.*}
